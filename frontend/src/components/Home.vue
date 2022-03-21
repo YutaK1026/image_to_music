@@ -16,10 +16,10 @@
 import axios from 'axios'
 
 export default {
-  data() {
+  data () {
     return {
-      randomNum: 1,
-    };
+      randomNum: 1
+    }
   },
   methods: {
     getRandom () {
