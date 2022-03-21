@@ -21,3 +21,12 @@ distというファイルが生成されたにすぎます。
 行きついた先のサイトはここでした
 https://qiita.com/kasayu/items/43734e570dc458a5be15
 
+thisの使い方。export defaultの中と外の違いが書かれている
+https://prograshi.com/language/vue-js/inside-and-outside-of-export-default/
+
+
+INTERNAL SERVER ERRORが出た場合、(検証のネットワークのところ)Flask(サーバー側)に問題があります！
+
+https://kazusa-pg.com/python-binarydata-picture/
+Pillowで画像を保存せずに扱う方法
+
