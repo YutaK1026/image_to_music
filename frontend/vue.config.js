@@ -5,5 +5,9 @@ module.exports = {
         poll: true
       }
     }
-  }
+  },
+
+  transpileDependencies: [
+    'vuetify'
+  ]
 }
