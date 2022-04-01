@@ -2,4 +2,14 @@ FROM python:3.6
 
 WORKDIR /usr/src/app
 
-RUN pip install flask
+RUN pip install flask \
+    pip install wavefile \
+    pip install sounddevice \
+    pip install flask_restful \
+    pip install pillow \
+    pip install pathlib \
+    pip install pipenv \
+    pip install librosa \
+    pip install scipy \
+    pip install pytesseract \ 
+    pip install gTTS

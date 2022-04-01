@@ -5,7 +5,7 @@
         <img :src="uploadedImage" style="width:100%;" />
       </div>
       <input type="file" class="file_input" name="photo" @change="onFileChange"  accept="image/*" />
-      <button @click='onUploadImage'>画像判定してくだちい・・・</button>
+      <button @click='onUploadImage'>画像判定してください</button>
     </div>
   </div>
 </template>

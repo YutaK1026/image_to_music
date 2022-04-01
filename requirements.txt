@@ -2,3 +2,6 @@ librosa
 matplotlib
 numpy
 pipenv
+scipy
+wavefile
+sounddevice

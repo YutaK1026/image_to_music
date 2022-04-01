@@ -10,6 +10,7 @@ from PIL import Image
 from pathlib import Path
 from io import BytesIO
 import base64
+import ImageToMusic
 
 # static_folder：vueでビルドした静的ファイルのパスを指定
 # template_folder：vueでビルドしたindex.htmlのパスを指定
@@ -33,10 +34,10 @@ def index(path):
 @app.route('/classification', methods=['POST'])
 def uploadImage():
     if request.method == 'POST':
-        #base64_png =  request.form['image']
-        #code = base64.b64decode(base64_png.split(',')[1]) 
-        #image_decoded = Image.open(BytesIO(code))
-        #image_decoded.save(Path(app.config['UPLOAD_FOLDER']) / 'image.png')
+        base64_png =  request.form['image']
+        code = base64.b64decode(base64_png.split(',')[1]) 
+        image_decoded = Image.open(BytesIO(code))
+        image_decoded.save(Path(app.config['UPLOAD_FOLDER']) / 'image.png')
         return make_response(jsonify({'result': 'success'}))
     else: 
         return make_response(jsonify({'result': 'invalid method'}), 400)

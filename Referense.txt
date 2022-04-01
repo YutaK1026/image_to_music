@@ -8,6 +8,10 @@
 dockerについて
 https://qiita.com/A-Kira/items/ed12de84dda0230a4eae
 
+フロント起動
+docker container exec -it vue_container sh
+npm run dev
+
 なんか、起動してもhttp://0.0.0.0:8080につながんない
 localhost:8080に繋げたら動いた。何でだぁ？
 
@@ -30,3 +34,20 @@ INTERNAL SERVER ERRORが出た場合、(検証のネットワークのところ)
 https://kazusa-pg.com/python-binarydata-picture/
 Pillowで画像を保存せずに扱う方法
 
+https://teratail.com/questions/307506
+これつかえば、なんかいい感じに逆フーリエ変換できそう
+耳が痛くなるからイヤホンやめな
+
+https://vigne-cla.com/25-1/
+一応画像のフーリエ変換の記事
+なんかパワースペクトルで表されてるなぁ、なんでだろう
+
+https://101010.fun/programming/python-fft-first-step.html#header-4-3
+これくらい綺麗にやりたいものだが…
+
+https://yukara-13.hatenablog.com/entry/2013/11/17/210204
+これも参考にできるかなぁ？
+
+
+https://qiita.com/okateru/items/f1350c3d103600e64163
+画像のやり取りに関する記事
