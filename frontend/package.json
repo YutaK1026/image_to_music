@@ -14,8 +14,10 @@
     "unit": "jest --config test/unit/jest.conf.js --coverage"
   },
   "dependencies": {
+    "ajv": "^6.12.6",
     "vue": "^2.6.14",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuetify": "^2.6.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

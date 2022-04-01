@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="imgContent">
+      <Vspacer></Vspacer>
       <div class="imagePreview">
         <img :src="uploadedImage" style="width:10%;" />
       </div>
