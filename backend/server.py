@@ -10,7 +10,7 @@ from PIL import Image
 from pathlib import Path
 from io import BytesIO
 import base64
-import ImageToMusic
+#import ImageToMusic
 
 # static_folder：vueでビルドした静的ファイルのパスを指定
 # template_folder：vueでビルドしたindex.htmlのパスを指定

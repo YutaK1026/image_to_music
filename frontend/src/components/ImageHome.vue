@@ -2,12 +2,12 @@
   <div>
     <div class="imgContent">
       <div class="imagePreview">
-        <img :src="uploadedImage" style="width:100%;" />
+        <img :src="uploadedImage" style="width:10%;" />
       </div>
       <input type="file" class="file_input" name="photo" @change="onFileChange"  accept="image/*" />
       <button @click='onUploadImage'>画像判定してください</button>
     </div>
-    <img :src = 'LRUrl' width="100%" height="auto">
+    <img :src = 'LRUrl' width="10%" height="auto">
   </div>
 </template>
 
