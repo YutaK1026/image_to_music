@@ -7,6 +7,7 @@
       <input type="file" class="file_input" name="photo" @change="onFileChange"  accept="image/*" />
       <button @click='onUploadImage'>画像判定してください</button>
     </div>
+    <img :src = 'LRUrl' width="100%" height="auto">
   </div>
 </template>
 
@@ -15,11 +16,10 @@ import axios from 'axios'
 
 const API_URL = 'http://localhost:5000'
 export default {
-  data () {
-    return {
-      uploadedImage: ''
-    }
-  },
+  data: () => ({
+    LRUrl: '',
+    uploadedImage: ''
+  }),
   methods: {
     // 選択した画像を反映
     onFileChange (e) {
@@ -39,8 +39,14 @@ export default {
       var params = new FormData()
       params.append('image', this.uploadedImage)
       // Axiosを用いてFormData化したデータをFlaskへPostしています。
-      axios.post(`${API_URL}/classification`, params).then(function (response) {
+      axios.post(`${API_URL}/classification`, params).then(response => {
         console.log(response)
+        const status = response.data.status
+        if (status === 'error') {
+          console.log('ERROR')
+        } else {
+          this.LRUrl = response.data.response_data
+        }
       })
     }
   }

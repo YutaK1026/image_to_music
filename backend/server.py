@@ -38,7 +38,7 @@ def uploadImage():
         code = base64.b64decode(base64_png.split(',')[1]) 
         image_decoded = Image.open(BytesIO(code))
         image_decoded.save(Path(app.config['UPLOAD_FOLDER']) / 'image.png')
-        return make_response(jsonify({'result': 'success'}))
+        return jsonify({'response_data': base64_png})
     else: 
         return make_response(jsonify({'result': 'invalid method'}), 400)
 
