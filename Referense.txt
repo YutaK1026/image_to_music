@@ -54,3 +54,9 @@ https://qiita.com/okateru/items/f1350c3d103600e64163
 
 https://qiita.com/reflet/items/88dc298c8887ad517845
 いれたもの。エラーでたら消す
+
+https://pystyle.info/opencv-convert-image-to-base64/
+opencvつかってbase64形式に変更する。
+
+https://note.nkmk.me/python-opencv-numpy-color-to-gray/
+画像を白黒に変換するやつ

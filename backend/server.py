@@ -25,20 +25,32 @@ CORS(app)
 UPLOAD_FOLDER = './uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+
 # 任意のリクエストを受け取った時、index.htmlを参照
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
+
 def index(path):
     return render_template("index.html")
 
 @app.route('/classification', methods=['POST'])
+
+
+
 def uploadImage():
     if request.method == 'POST':
         base64_png =  request.form['image']
         code = base64.b64decode(base64_png.split(',')[1]) 
         image_decoded = Image.open(BytesIO(code))
         image_decoded.save(Path(app.config['UPLOAD_FOLDER']) / 'image.png')
-        return jsonify({'response_data': base64_png})
+
+        img = Image.open("./uploads/image.png")
+        img_g = img.convert(mode = "1")
+        buffered = BytesIO()
+        img_g.save(buffered, format="png")
+        img_base64 = base64.b64encode(buffered.getvalue()).decode('ascii')
+
+        return jsonify({'response_data':"data:image/png;base64,"+img_base64})
     else: 
         return make_response(jsonify({'result': 'invalid method'}), 400)
 
